@@ -4,70 +4,170 @@
     padding: 0;
 }
 
+*::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background:#F7F8FA;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #073857;
+    border-radius: 20px;
+    border: 1px solid #073857;
+  }
+
 body{
-    width: 100vw;
-    height: 100vh;
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(240,240,240);
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 0 0 15px 15px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 250px;
-    padding-bottom: 15px;
-    background-color: white;
-}
+/* prima carta */
 
-.card img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-image: linear-gradient(60deg, #2AAA8A, #4169E1);
-    padding: 5px;
-    margin-top: -45px;
-}
-
-.card h2{
-    margin: 10px 0;
-}
-
-.cont{
-    width: 90%;
-    height: 0;
-    overflow: hidden;
-    text-align: center;
-    transition: all 0.6s ease;
-}
-
-.card .cont .link i{
-    font-size: 25px;
-    color: rgb(82, 82, 82);
-    transition: all 0.2s ease;
-}
-
-.card .cont .link i:hover{
-    color: black;
-    cursor: pointer;
-}
-
-.card:hover > .cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
+.card1{
+    width: 300px;
     height: 200px;
+    background-color: #008ecf;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(#073857) 0px 3px 8px;
 }
 
-.card:hover > .link{
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
+.round-img2{
+    float: left;
+    margin-top: -40px;
+    margin-left: -60px;
 }
+
+.round-img2 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid white;
+}
+
+.content2{
+    padding-left: 8px;
+    padding-top: 2px;
+    color: #09263c;
+    text-align: center;
+}
+
+/* Seconda carta */
+
+.card2{
+    display: flex;
+    align-items: center;
+}
+
+.round-img{
+    z-index: 500;
+}
+
+.round-img img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+
+.content{
+    max-width: 400px;
+    min-width: 120px;
+    height: 140px;
+    border-radius: 0 15px 15px 0px;
+    margin-left: -25px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.label{
+    text-align: center;
+    background-color: #073857;
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    padding: 2px;
+}
+
+/* Terza carta */
+
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+  }
+  .slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  .card{
+    width: 300px;
+    border-radius: 25px;
+    background-color: #FFF;
+  }
+  .image-content,
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4070F4;
+    border-radius: 25px 25px 0 25px;
+  }
+  .overlay::before,
+  .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070F4;
+  }
+  .overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+  }
+  .card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+  }
+  .card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+    z-index: 500;
+  }
+
+  
